@@ -11,6 +11,11 @@
   font-size: 25px;
 
 }
+
+#newtext{
+  margin-left: 20%;
+  margin-right: 20%;
+}
 .add-box{
   margin-left: 20%;
   margin-right: 20%;
@@ -18,7 +23,35 @@
   vertical-align: middle;
   text-align: center;
 }
-p{
+span{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-wrap: break-word;
+  margin-left: 30%;
+  margin-right: 30%;
   font-size: 40px;
-  text-align: center;
+  transition: all 0.5s ease;
+  transform: scale(1, 1);
+}
+
+span:hover{
+  transform: scale(1.5, 1.5);
+}
+
+.delete{
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline-block;
+  border: none;
+}
+.image_delete{
+  transition: all 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.image_delete:hover{
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(360deg);
 }
