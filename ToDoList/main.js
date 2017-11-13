@@ -19,13 +19,11 @@ addtext.onclick = function()
 
 function newwork()
 {
-  var i = 0;
   var newstring = document.getElementById('newtext');
   var tempstr = "";
   mas.forEach(function(text, i)
   {
     tempstr += "<button class=delete onclick=deletework(" + i + ")><img class=image_delete src="+"images/delete.png"+"></button><span>" + text + "</span><br>";
-    i++;
   });
   newstring.innerHTML = tempstr;
 }
