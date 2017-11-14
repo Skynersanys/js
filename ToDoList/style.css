@@ -7,12 +7,12 @@
 #button{
   vertical-align: middle;
   height: 40px;
-  width: auto;
+  width: 130px;
   font-size: 25px;
-
 }
 
 #newtext{
+  margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -29,7 +29,7 @@ span{
   overflow-wrap: break-word;
   margin-left: 30%;
   margin-right: 30%;
-  font-size: 40px;
+  font-size: 30px;
   transition: all 0.5s ease;
   transform: scale(1, 1);
 }
