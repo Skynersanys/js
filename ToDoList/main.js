@@ -1,35 +1,37 @@
-var mas = [];
-var addtext = document.getElementById("button");
+var index = 0;
+var addButton = document.getElementById("addButtonId");
+var input = document.getElementById("inputId");
+var todoList = document.getElementById("todoListId");
 
-addtext.onclick = function()
-  {
-    var valueform = document.getElementById('form');
-    var text = document.getElementById('form').value;
-    if(text != "")
-    {
-        mas.push(text);
-        newwork();
-        valueform.value = "";
-    }
-    else
-    {
-      valueform.value = "Введите задание";
-    }
-  }
-
-function newwork()
+addButton.onclick = function()
 {
-  var newstring = document.getElementById('newtext');
-  var tempstr = "";
-  mas.forEach(function(text, i)
+var text = input.value;
+if(text != "")
   {
-    tempstr += "<button class=delete onclick=deletework(" + i + ")><img class=image_delete src="+"images/delete.png"+"></button><span>" + text + "</span><br>";
-  });
-  newstring.innerHTML = tempstr;
+    var string = document.createTextNode(text);
+    var li = document.createElement("li");
+    var removeButton = document.createElement("button");
+
+    removeButton.setAttribute("id", "removeButton");
+    li.setAttribute("id", index);
+    li.appendChild(string);
+    li.appendChild(removeButton);
+    todoList.appendChild(li);
+    remove(index, removeButton);
+    index ++;
+    input.value = "";
+  }
+else
+  {
+    alert("Введите задание")
+  }
 }
 
-function deletework(i)
+function remove(index, removeButton)
 {
-  mas.splice(i, 1);
-  newwork();
+  removeButton.onclick = function()
+  {
+    var idString = document.getElementById(index);
+    todoList.removeChild(idString);
+  }
 }
