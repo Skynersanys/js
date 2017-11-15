@@ -1,0 +1,57 @@
+#form{
+  vertical-align: middle;
+  height: 40px;
+  width: 700px;
+  font-size: 25px;
+}
+#button{
+  vertical-align: middle;
+  height: 40px;
+  width: 130px;
+  font-size: 25px;
+}
+
+#newtext{
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.add-box{
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 60px;
+  vertical-align: middle;
+  text-align: center;
+}
+span{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-wrap: break-word;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 30px;
+  transition: all 0.5s ease;
+  transform: scale(1, 1);
+}
+
+span:hover{
+  transform: scale(1.5, 1.5);
+}
+
+.delete{
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline-block;
+  border: none;
+}
+.image_delete{
+  transition: all 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.image_delete:hover{
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(360deg);
+}
